@@ -1,0 +1,11 @@
+numpy
+hnswlib
+pyyaml
+scikit-learn
+pandas
+tqdm
+requests
+tensorflow
+matplotlib
+seaborn
+tensorflow_datasets
