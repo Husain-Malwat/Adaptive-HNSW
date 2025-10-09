@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# Final updated version of download_datasets.py
-# Incorporates efficient single-archive download logic for SIFT1M and GIST1M
-# Retains robust features like CLI, progress bars, and TensorFlow fallback.
-
 import os
 import argparse
 import requests

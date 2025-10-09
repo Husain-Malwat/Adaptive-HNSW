@@ -1,6 +1,6 @@
 # Dataset Download Instructions
 
-This guide provides instructions for downloading the SIFT1M and GIST1M datasets using the updated `download_datasets.py` script.
+This guide provides instructions for downloading the SIFT1M and GIST1M datasets using the `download_datasets.py` script.
 
 ## Prerequisites
 
