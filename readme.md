@@ -26,33 +26,8 @@ This repository provides both a **custom implementation** and an **adaptive opti
 
 ---
 
-## Overview
 
-**Adaptive HNSW** is a toolkit for approximate nearest neighbor (ANN) search that combines:
-
-1. **Custom Implementation**: A pure Python/NumPy implementation of HNSW from scratch to understand the algorithm's internals
-2. **Production Wrapper**: Integration with the high-performance [hnswlib](https://github.com/nmslib/hnswlib) C++ library
-3. **Adaptive Optimization**: Query pattern analysis and index adaptation for improved performance
-4. **Comprehensive Benchmarking**: Tools to compare implementations and measure performance across multiple metrics
-
-### What Makes This Project Unique?
-
-- 🎓 **Learning-Focused**: Clean, documented code ideal for understanding HNSW mechanics
-- 📊 **Production-Ready**: Wrapper around battle-tested hnswlib for real-world applications
-- 🧠 **Intelligent Adaptation**: Learns from query patterns to optimize search performance
-- 📈 **Extensive Analysis**: Built-in benchmarking, visualization, and performance tracking
-- 🔬 **Research-Oriented**: Designed for experimentation with adaptation strategies
-
----
-
-## Key Features
-
-### Core Capabilities
-
-- **Dual Implementation Approach**
-  - From-scratch Python implementation for education
-  - hnswlib wrapper for production performance
-  - Side-by-side comparison and validation
+## Features
 
 - **Adaptive Optimization Framework**
   - Query pattern logging and analysis
@@ -122,7 +97,7 @@ def search(query, k, ef):
     return top_k(candidates, k)
 ```
 
-**4. Key Parameters**
+**4.  Parameters**
 
 | Parameter | Description | Typical Range | Impact |
 |-----------|-------------|---------------|--------|
@@ -145,7 +120,7 @@ This project extends standard HNSW with adaptive optimization:
 
 **Frequency-Based Adaptation**
 - Monitors which nodes are frequently accessed during searches
-- Identifies "hub" nodes in the query distribution
+- Identifies hub nodes in the query distribution
 - Simulates optimization strategies (e.g., entry point adjustment, connection prioritization)
 
 **Performance Gains Observed**
@@ -415,7 +390,7 @@ class MyCustomAdapter(BaseAdapter):
         pass
 ```
 
-**Potential Adaptation Strategies:**
+** Adaptation Strategies:**
 
 1. **Spatial Clustering**: Group queries by region in vector space
 2. **Temporal Patterns**: Identify time-based query shifts
@@ -458,7 +433,7 @@ class MyCustomAdapter(BaseAdapter):
 
 ## Datasets
 
-### Supported Datasets
+### Benchmark Datasets
 
 1. **SIFT1M** (128-dimensional SIFT descriptors)
    - 1M base vectors
@@ -494,26 +469,6 @@ python download_datasets.py --datasets sift1m gist1m --data-dir ../../data/
 
 ---
 
-## Configuration
-
-### Parameter Tuning Guidelines
-
-**M (connections per node)**
-- Small (4-8): Fast build, lower recall
-- Medium (12-24): Balanced performance
-- Large (32-64): High recall, more memory
-
-**ef_construction**
-- Low (50-100): Fast build, may reduce quality
-- Medium (100-300): Standard choice
-- High (400-1000): Maximum quality, slow build
-
-**ef_search**
-- Must be ≥ k (number of neighbors)
-- Higher values: Better recall, slower queries
-- Tune based on recall/latency tradeoff
-
----
 
 ## Architecture
 
@@ -572,7 +527,7 @@ BenchmarkVisualizer
 
 Contributions are welcome! Here's how you can help:
 
-### Areas for Contribution
+<!-- ### Areas for Contribution
 
 1. **New Adaptation Strategies**
    - Spatial clustering adapters
@@ -594,7 +549,7 @@ Contributions are welcome! Here's how you can help:
    - Custom data format loaders
    - Synthetic data generators
 
-### Development Setup
+### Development Setup -->
 
 ```bash
 # Fork and clone the repository
@@ -616,7 +571,7 @@ git push origin feature/my-new-feature
 ```
 
 
-## 📖 Citation
+## Citation
 
 If you use this code in your research, please cite:
 
@@ -647,7 +602,7 @@ If you use this code in your research, please cite:
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Prof. Anirban Dasgupta, IIT Gandhinagar**: For invaluable guidance and mentorship throughout this research project
 - **hnswlib**: Fast C++ implementation by @nmslib
